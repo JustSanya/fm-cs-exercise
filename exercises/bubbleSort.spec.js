@@ -1,19 +1,16 @@
 function bubbleSort(nums) {
   const arr = new Array(...nums);
 
-  let unsortedLength = arr.length;
-
-  for (let j = 0; j < unsortedLength; j++) {
+  for (let j = 0; j < arr.length; j++) {
     for (let i = 0; i < arr.length - j; i++) {
-      if (arr[i] > arr[i + 1]) {
+      if (arr[i] > arr[i + 1] && arr[i + 1]) {
         const temp = arr[i + 1];
         arr[i + 1] = arr[i];
         arr[i] = temp;
       }
     }
-
   }
-  console.log(arr);
+
   return arr;
 }
 
